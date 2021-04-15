@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -118,3 +119,26 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+APPROACHES = {
+    "PositionRank": {
+        "WINDOW_SIZE": 10,
+        "MAX_KEY_PHRASE_WORD_COUNT": 3
+    },
+    "MultipartiteRank": {
+        "THRESHOLD": 0.74,
+        "ALPHA": 1.1
+    },
+    "TextRank": {
+        "WINDOW_SIZE": 2,
+        "TOP_T_PERCENT": 0.33
+    },
+    "SingleRank": {
+        "WINDOW_SIZE": 10,
+    },
+    "TopicRank": {
+        "THRESHOLD": 0.74,
+    },
+
+}
