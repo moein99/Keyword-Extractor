@@ -37,7 +37,7 @@ end-point: keyword_extractor/api/extract
 data:
 {
     text: put a document in this field
-    method: one of following algorithms -> text, position, multipartite, topic, single
+    method: one of the following algorithms -> text, position, multipartite, topic, single
     num_of_keywords: top n keywords
 }
 ```
