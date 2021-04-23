@@ -1,4 +1,4 @@
-from django.conf import settings
+from keyword_extractor import settings
 from perke.base.types import HierarchicalClusteringMetric, HierarchicalClusteringLinkageMethod, WordNormalizationMethod
 from perke.unsupervised.graph_based import MultipartiteRank
 

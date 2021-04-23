@@ -1,4 +1,4 @@
-from django.conf import settings
+from keyword_extractor import settings
 from perke.unsupervised.graph_based import TextRank
 
 from extractor.approaches.unsupervised.graph_based import KeyPhrase
