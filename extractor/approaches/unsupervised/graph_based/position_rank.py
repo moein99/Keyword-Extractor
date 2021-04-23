@@ -1,6 +1,6 @@
-from django.conf import settings
 from perke.unsupervised.graph_based.position_rank import PositionRank
 from extractor.approaches.unsupervised.graph_based import KeyPhrase
+from keyword_extractor import settings
 
 valid_pos_tags = {'N', 'Ne', 'AJ', 'AJe'}
 grammar = r"""

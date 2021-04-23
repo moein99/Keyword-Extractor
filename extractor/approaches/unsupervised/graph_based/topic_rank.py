@@ -1,4 +1,4 @@
-from django.conf import settings
+from keyword_extractor import settings
 from perke.base.types import (WordNormalizationMethod,
                               HierarchicalClusteringMetric,
                               HierarchicalClusteringLinkageMethod)
