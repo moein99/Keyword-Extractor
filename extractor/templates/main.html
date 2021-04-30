@@ -1,0 +1,53 @@
+{% load static %}
+{% load semanticui %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/semantic.min.css' %}">
+    <script src="{% static 'js/semantic.js' %}"></script>
+    <title>Keyword Extractor</title>
+    <meta content="text/html" charset="UTF-8">
+</head>
+
+<body style="background-color: #ffffff">
+
+    <div class="ui centered grid" style="margin-top: 15em;">
+        <div class="three wide column">
+            <!-- <form action="/your-name/" method="post">
+                {% csrf_token %}
+                {% render_form form %}
+                <input type="submit" value="Submit">
+            </form> -->
+            
+            <form class="ui form" role="form" method="post">
+                {% csrf_token %}
+                {{ form.media }}
+                <div class="field" name="text">
+                    <label>Text</label>
+                    <textarea style="text-align: right;" rows="25" name="text"></textarea>
+                </div>
+                <div class="two fields">
+                    <div class="ten wide field">
+                        <label>Method</label>
+                        <select class="ui search dropdown" name="method">
+                            <option value="">Select Method</option>
+                            <option value="position">Position Rank</option>
+                            <option value="single">Single Rank</option>
+                            <option value="multipartite">Multipartite Rank"</option>
+                            <option value="topic">Topic Rank</option>
+                            <option value="text">Text Rank</option>
+                        </select>
+                    </div>
+                    <div class="six wide field" name="num_of_keywords">
+                        <label>Number of Keywords</label>
+                        <input type="number" name="num_of_keywords" required value="10">
+                    </div>
+                </div>
+                <button type="submit" class="center fluid ui green button">Submit</button>
+            </form>
+        </div>
+      </div>
+
+</body>
+</html>

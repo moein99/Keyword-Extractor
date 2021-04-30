@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/semantic.min.css' %}">
+    <script src="{% static 'js/semantic.js' %}"></script>
+    <title>Keyword Extractor</title>
+    <meta content="text/html" charset="UTF-8">
+</head>
+
+<body style="background-color: white">
+
+    <div class="ui centered grid" style="margin-top: 15em;">
+        <div class="three wide column">
+            <table class="ui inverted table" dir="rtl">
+                <thead>
+                    <tr>
+                    <th style="width: 75%;text-align: right;">Key Word</th>
+                    <th>Weight</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for item in result %}
+                    <tr>
+                    <td style="width: 75%;text-align: right;">{{ item.key }}</td>
+                    <td>{{ item.weight }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+        </div>
+    </div>
+
+</body>

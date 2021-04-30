@@ -41,3 +41,8 @@ data:
     num_of_keywords: top n keywords
 }
 ```
+
+## GUI
+```
+end-point: keyword_extractor/gui/extract
+```
