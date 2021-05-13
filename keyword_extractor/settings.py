@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'extractor',
     'semanticuiforms',
     'rest_framework',
     'django.contrib.admin',
