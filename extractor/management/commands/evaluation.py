@@ -6,7 +6,7 @@ import multiprocessing
 NUM_OF_PROCESS = 50
 
 
-class Evaluation(BaseCommand):
+class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument('limit', type=str)
