@@ -27,6 +27,7 @@ def read_data(data_set_address):
 def store_results():
     result = {}
     for name in METRICS:
+        print(f"{name}: {METRICS[name].prec_denom}, {METRICS[name].rec_denom}, {METRICS[name].true_p}")
         precision = METRICS[name].true_p / METRICS[name].prec_denom
         recall = METRICS[name].true_p / METRICS[name].rec_denom
         result[name] = {
