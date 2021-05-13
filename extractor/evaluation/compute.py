@@ -54,6 +54,7 @@ def compute_metrics(data):
             partial_tp = len(set(extracted_keywords).intersection(set(document_keywords)))
             partial_precision_denom = len(extracted_keywords)
             partial_recall_denom = len(document_keywords)
+            print(partial_tp, partial_precision_denom, partial_recall_denom)
             METRICS[approach_name].true_p += partial_tp
             METRICS[approach_name].prec_denom += partial_precision_denom
             METRICS[approach_name].rec_denom += partial_recall_denom
