@@ -58,8 +58,3 @@ def compute_metrics(data):
             METRICS[approach_name].rec_denom += partial_recall_denom
         print(counter)
         counter += 1
-
-
-data = read_data("data.test")
-compute_metrics(data)
-store_results()
