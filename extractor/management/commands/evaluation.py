@@ -9,7 +9,7 @@ NUM_OF_PROCESS = 50
 class Command(BaseCommand):
 
     def add_arguments(self, parser):
-        parser.add_argument('limit', type=str)
+        parser.add_argument('limit', type=int)
 
     def handle(self, *args, **options):
         limit = options["limit"] if options["limit"] else -1
